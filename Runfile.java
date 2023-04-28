@@ -75,6 +75,8 @@ class Runfile
                     System.out.println("Invalid input");
                     
             }
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
             
             }}  
         
@@ -127,6 +129,8 @@ class Runfile
                     System.out.println("Invalid input");
                     
             }
+            System.out.print("\033[H\033[2J");
+            System.out.flush();                
             
             } }
         
@@ -169,8 +173,8 @@ class Runfile
                     System.out.println("Invalid input");
                     
             }
-            
-            }        
+            System.out.print("\033[H\033[2J");
+            System.out.flush();            }        
         }}}
     public void print_details(Person per){
         System.out.println("Name     : " + per.name);
