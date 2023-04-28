@@ -37,6 +37,7 @@ class Runfile
             {
                 while(true)
         {
+            print_details(curr_Member);
             Student curr=(Student)curr_Member;
             System.out.println("What do you want to do?");
             System.out.println("1)Change your current password");
@@ -74,12 +75,14 @@ class Runfile
                     System.out.println("Invalid input");
                     
             }
+
             
             }}  
         
         if(curr_Member.age>=45)
             {while(true)
         {
+            print_details(curr_Member);
             Professor curr=(Professor)curr_Member;
             System.out.println("What do you want to do?");
             System.out.println("1)Update Attendance of the students");
@@ -125,12 +128,14 @@ class Runfile
                     System.out.println("Invalid input");
                     
             }
+               
             
             } }
         
         if(curr_Member.age==44)
             {while(true)
         {
+            print_details(curr_Member);
             Staff curr=(Staff)curr_Member;
             System.out.println("What do you want to do?");
             System.out.println("1)Update Hostel of the students");
@@ -166,7 +171,13 @@ class Runfile
                     System.out.println("Invalid input");
                     
             }
-            
-            }        
+         }        
         }}}
+    public void print_details(Person per){
+        System.out.println("Name     : " + per.name);
+        System.out.println("Age      : " + per.age);
+        System.out.println("Sex      : " + per.sex);
+        System.out.println("Username : " + per.username);
+    }
+        
 }
