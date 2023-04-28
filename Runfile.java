@@ -37,6 +37,7 @@ class Runfile
             {
                 while(true)
         {
+            print_details(obj);
             Student curr=(Student)curr_Member;
             System.out.println("What do you want to do?");
             System.out.println("1)Change your current password");
@@ -170,7 +171,10 @@ class Runfile
             }        
         }}}
     public void print_details(Person per){
-        System.out.println("Name : " + per.name);
-        System.out.println("Age  : " + per.age);
+        System.out.println("Name     : " + per.name);
+        System.out.println("Age      : " + per.age);
+        System.out.println("Sex      : " + per.sex);
+        System.out.println("Username : " + per.username);
+    }
         
 }
