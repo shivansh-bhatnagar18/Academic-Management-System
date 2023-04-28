@@ -169,4 +169,8 @@ class Runfile
             
             }        
         }}}
+    public void print_details(Person per){
+        System.out.println("Name : " + per.name);
+        System.out.println("Age  : " + per.age);
+        
 }
