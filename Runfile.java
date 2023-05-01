@@ -24,7 +24,7 @@ class Runfile
         outer:
         while(true)
         {
-            
+        System.out.println("\u000c");    
         Login obj=new Login();
         obj.Welcome();
         Scanner sc=new Scanner(System.in);
@@ -37,7 +37,9 @@ class Runfile
             {
                 while(true)
         {
+            System.out.println("\u000c"); 
             print_details(curr_Member);
+             
             Student curr=(Student)curr_Member;
             System.out.println("What do you want to do?");
             System.out.println("1)Change your current password");
@@ -48,6 +50,7 @@ class Runfile
             System.out.println("6)Return back to login page");
             System.out.println("7)exit");
             int choice=sc.nextInt();
+            int disp;
             switch(choice)
             {
                 case 1:
@@ -57,16 +60,40 @@ class Runfile
                     break;
                 case 2:
                     curr.viewMarks();
+                    System.out.println("0)Go back to main menu");
+                    disp=sc.nextInt();
+                    if(disp==0)
                     break;
+                    else
+                    {System.out.println("Invalid Input");
+                     break;}   
                 case 3:
                     curr.checkAttendance();
+                    System.out.println("0)Go back to main menu");
+                    disp=sc.nextInt();
+                    if(disp==0)
                     break;
+                    else
+                    {System.out.println("Invalid Input");
+                     break;}   
                 case 4:
                     curr.viewHostel();
+                    System.out.println("0)Go back to main menu");
+                    disp=sc.nextInt();
+                    if(disp==0)
                     break;
+                    else
+                    {System.out.println("Invalid Input");
+                     break;}   
                 case 5:
                     curr.viewSubjects();
+                    System.out.println("0)Go back to main menu");
+                    disp=sc.nextInt();
+                    if(disp==0)
                     break;
+                    else
+                    {System.out.println("Invalid Input");
+                     break;}   
                 case 6:
                     continue outer;
                 case 7:
@@ -75,14 +102,14 @@ class Runfile
                     System.out.println("Invalid input");
                     
             }
-
-            
             }}  
         
         if(curr_Member.age>=45)
             {while(true)
         {
+            System.out.println("\u000c"); 
             print_details(curr_Member);
+            
             Professor curr=(Professor)curr_Member;
             System.out.println("What do you want to do?");
             System.out.println("1)Update Attendance of the students");
@@ -135,7 +162,9 @@ class Runfile
         if(curr_Member.age==44)
             {while(true)
         {
+            System.out.println("\u000c"); 
             print_details(curr_Member);
+            
             Staff curr=(Staff)curr_Member;
             System.out.println("What do you want to do?");
             System.out.println("1)Update Hostel of the students");
@@ -173,11 +202,11 @@ class Runfile
             }
          }        
         }}}
-    public void print_details(Person per){
+    public static void print_details(Person per){
         System.out.println("Name     : " + per.name);
         System.out.println("Age      : " + per.age);
         System.out.println("Sex      : " + per.sex);
-        System.out.println("Username : " + per.username);
+        System.out.println("Username : " + per.Username);
     }
         
 }
