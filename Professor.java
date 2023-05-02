@@ -1,4 +1,4 @@
-public class Professor extends Person
+public class Professor extends Person implements Grace
 {
     int professorsID;
     String Subject;
