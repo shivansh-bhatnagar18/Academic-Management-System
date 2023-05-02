@@ -168,7 +168,7 @@ class Runfile
             Staff curr=(Staff)curr_Member;
             System.out.println("What do you want to do?");
             System.out.println("1)Update Hostel of the students");
-            System.out.println("2)Update Hostel of the students");
+            System.out.println("2)Update Grace Validity of students");
             System.out.println("3)Change your password");
             System.out.println("4)Back to login page");
             System.out.println("5)Exit");
