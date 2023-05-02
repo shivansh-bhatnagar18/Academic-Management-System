@@ -7,7 +7,7 @@ public class Staff extends Person
         this.staffID=staffID;
     }
     
-    void gracvalidity(Student stu , int valid){
+    void gracevalidity(Student stu , int valid){
         stu.gracevalid = valid;
     }
     
