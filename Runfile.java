@@ -168,9 +168,10 @@ class Runfile
             Staff curr=(Staff)curr_Member;
             System.out.println("What do you want to do?");
             System.out.println("1)Update Hostel of the students");
-            System.out.println("2)Change your password");
-            System.out.println("3)Back to login page");
-            System.out.println("4)Exit");
+            System.out.println("2)Update Hostel of the students");
+            System.out.println("3)Change your password");
+            System.out.println("4)Back to login page");
+            System.out.println("5)Exit");
             int choice=sc.nextInt();
             switch(choice)
             {
@@ -188,13 +189,25 @@ class Runfile
                     }
                     break;
                 case 2:
+                    System.out.println("Enter the roll number");
+                    int rolln = sc.nextInt();
+                    System.out.println("Enter 1 to make valid 0 to make invalid");
+                    int val =sc.nextInt();
+                    for(int i=0;i<10;i++)
+                    {
+                        Student stu=(Student)arr[i];
+                        if(stu.rollNo==rolln){
+                            curr.gracevalidity(stu,val);
+                        }
+                    }                    
+                case 3:
                     System.out.println("Enter the new password");
                     String newPassword=sc.next();
                     curr.changePassword(newPassword);
                     break;
-                case 3:
-                    continue outer;
                 case 4:
+                    continue outer;
+                case 5:
                     break outer;
                 default:
                     System.out.println("Invalid input");
