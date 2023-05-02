@@ -1,4 +1,4 @@
-public class Professor extends Person
+public class Professor extends Person implements Grace
 {
     int professorsID;
     String Subject;
@@ -8,6 +8,14 @@ public class Professor extends Person
         this.professorsID=professorsID;
         this.Subject=Subject;
     }
+    
+    public int setmarks(Student stu, int marks) {
+        if (stu.gracevalid ==1 && marks<95){
+            marks += inc;
+        }
+        return marks;
+    }
+    
     void setAttendance(Student stu)
     {
         if(Subject=="Mathematics")
@@ -20,10 +28,10 @@ public class Professor extends Person
     void assignScore(Student stu,int score)
     {
         if(Subject=="Mathematics")
-        stu.scores[0]=score;
+            stu.scores[0]=setmarks(stu,score);
         else if(Subject=="Electronics")
-        stu.scores[1]=score;
+            stu.scores[1]=setmarks(stu,score);
         else if(Subject=="Computer Science")
-        stu.scores[2]=score;
+            stu.scores[2]=setmarks(stu,score);
     }
 }

@@ -6,6 +6,7 @@ public class Student extends Person
     int scores[]={0,0,0};
     String Prof[]={"Dr. Sachin","Dr. Kallis","Dr. Fleming"};
     String hostelName;
+    int gracevalid;
     Student(String name,int age,char sex,int rollNo, String Username, String Password)
     {
         super(name,age,sex,Username,Password);
