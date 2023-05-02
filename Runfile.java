@@ -199,7 +199,8 @@ class Runfile
                         if(stu.rollNo==rolln){
                             curr.gracevalidity(stu,val);
                         }
-                    }                    
+                    }  
+                    break;
                 case 3:
                     System.out.println("Enter the new password");
                     String newPassword=sc.next();
