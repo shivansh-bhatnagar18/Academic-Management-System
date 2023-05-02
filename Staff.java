@@ -6,6 +6,11 @@ public class Staff extends Person
         super(name,age,sex,Username,Password);
         this.staffID=staffID;
     }
+    
+    void gracvalidity(Student stu , int valid){
+        stu.gracevalid = valid;
+    }
+    
     void allocateHostel(Student stu, String Hostel)
     {
         stu.hostelName=Hostel;
